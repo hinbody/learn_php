@@ -5,6 +5,8 @@ class Bike
   public $wheel_size;
   public $frame_color;
 
+  const VEHICLE = TRUE;
+
   public function paint_frame($new_color) {
     $this->frame_color = $new_color;
   }
@@ -30,4 +32,8 @@ $intrikat = new Bmx();
 echo "Originally the intrikat had " . $intrikat->pegs . " pegs" . PHP_EOL;
 $intrikat->add_pegs(4);
 echo "The intrikat now has " . $intrikat->pegs . " pegs" . PHP_EOL;
+
+if ($intrikat::VEHICLE):
+  echo "The intrikat is a vehicle" . PHP_EOL;
+endif
 ?>
